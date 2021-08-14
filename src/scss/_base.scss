@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto.ttf');
+
+}
+
+@font-face {
+  font-family: 'Shrikhand';
+  src: url('fonts/Shrikhand.ttf');
+
+}
+
 body {
   max-width: 375px;
-  font-family: calibri;
+  font-family: Roboto;
   margin: auto;
 }
 
@@ -31,6 +43,7 @@ body {
 }
 .booking-container__title {
   font-size: 28px;
+  font-family: Shrikhand;
 }
 .booking-container__text {
   font-size: 20px;
@@ -42,7 +55,7 @@ body {
   margin: 20px 0 50px 0;
   color: #fff;
   font-size: 20px;
-  background-color: #ff79da;
+  background: linear-gradient(90deg, rgba(241,125,219,1) 0%, rgba(156,89,220,1) 100%, rgba(239,116,218,1) 100%);
   border-radius: 50px;
   border: none;
   cursor: pointer;
@@ -56,6 +69,7 @@ body {
 .how-title {
   text-align: left;
   font-size: 28px;
+  font-family: Shrikhand;
   margin-left: 10px;
 }
 .how-order {
@@ -69,10 +83,14 @@ body {
   border-radius: 25px;
   box-shadow: 10px 10px 10px #dbd9d9;
   &__number {
+    line-height: 20px;
+    text-align: center;
     margin-left: -17px;
     padding: 8px;
     background-color: #9356dc;
     border-radius: 50%;
+    width: 20px;
+    height: 20px;
     color: #fff;
   }
   &__icon {
@@ -89,7 +107,12 @@ body {
 .resturants-container {
   background-color: #f6f6f6;
   padding: 20px;
+  
 }
+.resturants-header{
+  font-family: Shrikhand; ;
+}
+
 .footer-container {
   background-color: #353535;
 }
@@ -126,6 +149,8 @@ body {
     &__title {
       font-size: 24px;
       font-weight: bold;
+      font-family: Shrikhand;
+      
     }
     &__location {
       margin: 5px 0;
