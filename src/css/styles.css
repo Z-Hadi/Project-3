@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   src: url("fonts/Roboto.ttf"); }
 
 @font-face {
-  font-family: 'Shrikhand';
+  font-family: "Shrikhand";
   src: url("fonts/Shrikhand.ttf"); }
 
 body {
@@ -72,8 +72,8 @@ body {
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  transition: all  0.16s;
-  box-shadow: 5px 5px 5px  #cacaca; }
+  transition: all 0.16s;
+  box-shadow: 5px 5px 5px #cacaca; }
   .btn:hover {
     background: linear-gradient(45deg, #f17ddb 80%, #9c59dc 100%, #ef74da 100%);
     transform: scale(1.08);
