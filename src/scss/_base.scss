@@ -12,20 +12,33 @@ body {
   font-family: Roboto;
   margin: 0;
 }
-.logo-section {
-  background-color: white;
-}
 
-.logo-container {
+$btn-color: linear-gradient(
+  45deg,
+  rgba(241, 125, 219, 1) 0%,
+  rgba(156, 89, 220, 1) 100%,
+  rgba(239, 116, 218, 1) 100%
+);
+$clr-Tertiary: #99e2d0;
+
+@mixin container-width-margin {
   max-width: 450px;
   box-sizing: border-box;
-  padding: 0 15px;
   margin: auto;
 }
 
-.logo {
+@mixin flex-center {
   display: flex;
-  justify-content: center;
+  justify-content: center
+}
+.logo-container {
+  @include container-width-margin;
+  padding: 0 15px;
+  
+}
+
+.logo {
+  @include flex-center ;
   padding: 20px;
   &__img {
     width: 70%;
@@ -42,12 +55,9 @@ body {
 }
 
 .location {
-  max-width: 450px;
-  box-sizing: border-box;
-  margin: auto;
+  @include container-width-margin;
   padding: 0 15px;
-  display: flex;
-  justify-content: center;
+  @include flex-center ;
   padding: 20px 10px;
   font-size: 20px;
   &__text {
@@ -61,28 +71,20 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  max-width: 450px;
-  box-sizing: border-box;
-  margin: auto;
+  @include container-width-margin;
   padding: 0px 15px;
-}
-
-.booking-container__title {
+   &__title {
   font-size: 28px;
   font-family: Roboto;
-}
-.booking-container__text {
+   }
+  &__text {
   font-size: 20px;
   text-align: center;
   margin: 25px;
+  }
 }
-$btn-color: linear-gradient(
-  45deg,
-  rgba(241, 125, 219, 1) 0%,
-  rgba(156, 89, 220, 1) 100%,
-  rgba(239, 116, 218, 1) 100%
-);
-$clr-Tertiary: #99e2d0;
+
+
 .btn {
   padding: 20px 30px 20px 30px;
   margin: 20px 0 50px 0;
@@ -110,21 +112,20 @@ $clr-Tertiary: #99e2d0;
   background-color: white;
 }
 .how-container {
-  max-width: 450px;
-  margin: auto;
+  @include container-width-margin;
   padding: 0px 15px;
-}
-.how-Steps {
+  &__Steps {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 70px;
-}
-.how-title {
+  }
+ &__title {
   text-align: left;
   font-size: 28px;
   font-family: Roboto;
   margin-left: 10px;
+  }
 }
 .how-order {
   display: flex;
@@ -181,20 +182,16 @@ label {
   background-color: #f6f6f6;
 }
 .resturants-container {
-  max-width: 450px;
+  @include container-width-margin;
   background-color: #f6f6f6;
   padding: 15px;
-  box-sizing: border-box;
-  margin: auto;
-}
-.restaurants-header {
+  
+ &__header {
   font-family: Roboto;
   font-size: 28px;
+  }
 }
 
-.footer-container {
-  background-color: #353535;
-}
 
 .card {
   display: flex;
@@ -277,14 +274,14 @@ input {
   }
 }
 
+
+
 footer {
   background-color: #353535;
   padding: 15px;
 }
 .footer-container {
-  max-width: 450px;
-  box-sizing: border-box;
-  margin: auto;
+  @include container-width-margin;
   padding: 0px 15px;
   font-size: 18px;
 }
@@ -335,12 +332,10 @@ li {
   margin-top: -80px;
 }
 .meals-container {
-  max-width: 420px;
+  @include container-width-margin;
   background-color: #f6f6f6;
   margin-top: -80px;
-  margin: auto;
   padding: 15px 15px;
-  box-sizing: border-box;
   margin-top: 20px;
   border-top-right-radius: 30px;
   border-top-left-radius: 35px;
@@ -392,13 +387,11 @@ li {
 }
 
 .selection {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
+  @include flex-center ;
   background-color: $clr-Tertiary;
   height: 90px;
   width: 90px;
-  margin: -49px -15px 0 -100px;
+  margin: -49px -15px 0 -90px;
   border-radius: 0 20px 20px 0;
   transform: scaleX(0);
   transform-origin: right;
@@ -409,7 +402,7 @@ li {
     color: white;
     font-size: 40px;
     padding-top: 26px;
-    transition: transform 0.8s 200ms;
+    transition: transform 0.8s 0.08s;
     transform: rotate(0.3turn);
   }
 }
@@ -436,9 +429,9 @@ li {
 .meal-price {
   flex-grow: 2;
   font-family: Roboto;
+  text-align: right;
   font-size: 20px;
   font-weight: bold;
-  text-align: right;
-  margin-right: 25px;
-  margin-left: 40px;
+  margin: 0 20px ;
+  
 }
