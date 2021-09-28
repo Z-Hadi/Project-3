@@ -82,6 +82,7 @@ $btn-color: linear-gradient(
   rgba(156, 89, 220, 1) 100%,
   rgba(239, 116, 218, 1) 100%
 );
+$clr-Tertiary: #99e2d0;
 .btn {
   padding: 20px 30px 20px 30px;
   margin: 20px 0 50px 0;
@@ -242,6 +243,7 @@ label {
   text-align: right;
   font-size: 30px;
   color: grey;
+  padding-top: 10px;
 }
 input {
   display: none;
@@ -300,4 +302,143 @@ footer {
 
 li {
   list-style: none;
+}
+
+.back-arrow {
+  padding-top: 10px;
+  font-size: 24px;
+  margin-right: 13%;
+}
+
+.Returant-pic {
+  padding: 15px;
+}
+
+.resturant-img {
+  width: 100%;
+  border: 0px solid #fff;
+  object-fit: cover;
+  height: 250px;
+}
+
+.resturant-title {
+  margin-top: 10px;
+}
+
+.resturant-name {
+  display: flex;
+  font-family: Shrikhand;
+  font-size: 22px;
+}
+.Meals-section {
+  position: relative;
+  margin-top: -80px;
+}
+.meals-container {
+  max-width: 420px;
+  background-color: #f6f6f6;
+  margin-top: -80px;
+  margin: auto;
+  padding: 15px 15px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 35px;
+}
+
+.meal-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.meal-type {
+  text-align: left;
+  font-size: 20px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.meal-type::before {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  height: 0;
+  width: 50px;
+  content: "";
+  border-top: 3px solid #99e2d0;
+}
+
+.meal-order {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 90px;
+  padding: 15px 15px;
+  margin: 8px 0px;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover .selection {
+    transform: scaleX(1);
+    margin-left: 0px;
+    span {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+.selection {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  background-color: $clr-Tertiary;
+  height: 90px;
+  width: 90px;
+  margin: -49px -15px 0 -100px;
+  border-radius: 0 20px 20px 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  overflow: hidden;
+  span {
+    display: inline-block;
+    color: white;
+    font-size: 40px;
+    padding-top: 26px;
+    transition: transform 0.8s 200ms;
+    transform: rotate(0.3turn);
+  }
+}
+
+.meal-title {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.meal-content-price {
+  display: flex;
+  flex-direction: row;
+}
+.meal-content {
+  font-family: Roboto;
+  font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+.meal-price {
+  flex-grow: 2;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: right;
+  margin-right: 25px;
+  margin-left: 40px;
 }
