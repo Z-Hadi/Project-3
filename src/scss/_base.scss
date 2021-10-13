@@ -252,7 +252,9 @@ li {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 5px;
-
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
     margin: 0px;
   }
 
@@ -319,7 +321,7 @@ li {
   opacity: 0;
   justify-content: center;
   background-color: rgb(206, 206, 206);
-  animation: loading 3.8s forwards;
+  animation: loading 2.8s forwards;
   &__spinner {
     border: 50px solid #f2f2f6;
     border-radius: 50%;

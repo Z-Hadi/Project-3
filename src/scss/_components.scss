@@ -39,32 +39,47 @@ input {
   display: none;
 }
 .solid {
-  display: none;
-  background: linear-gradient(
+    background: linear-gradient(
     198deg,
     rgba(129, 79, 127, 1) 9%,
     rgba(160, 91, 220, 1) 30%
   );
+  transition: opacity 3s;
+  opacity: 0;
   -webkit-background-clip: text;
   color: transparent;
   padding: 1px;
+  position: absolute;
+  left: 0;
 }
 
 .empty {
+  transition: opacity 3s;
+  opacity: 1;
   padding: 1px;
+  left: 0;
+  position: absolute;
 }
+
 .favourite {
+  label{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: relative;
+
+  }
   input:checked + label {
     .solid {
       display: inline-block;
+      opacity: 1;
     }
     .empty {
       display: none;
+      opacity: 0;
     }
   }
-  .solid {
-    display: none;
-  }
+  
 }
 
 
