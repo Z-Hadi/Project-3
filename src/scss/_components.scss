@@ -1,125 +1,112 @@
 .btn {
-  padding: 20px 40px ;
-  margin: 20px 0 50px 0;
-  color: #fff;
-  font-size: 20px;
-  background: $btn-color;
-  font-weight: bold;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.16s;
-  box-shadow: 5px 5px 5px #cacaca;
-  &:hover {
-    background: linear-gradient(
-      45deg,
-      rgba(241, 125, 219, 1) 80%,
-      rgba(156, 89, 220, 1) 100%,
-      rgba(239, 116, 218, 1) 100%
-    );
-    transform: scale(1.08);
-    box-shadow: 10px 10px 10px #b1b0b0;
-  }
+    padding: 20px 40px;
+    margin: 20px 0 50px 0;
+    color: #fff;
+    font-size: 20px;
+    background: $btn-color;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.16s;
+    box-shadow: 5px 5px 5px #cacaca;
+    &:hover {
+        background: linear-gradient( 45deg, rgba(241, 125, 219, 1) 80%, rgba(156, 89, 220, 1) 100%, rgba(239, 116, 218, 1) 100%);
+        transform: scale(1.08);
+        box-shadow: 10px 10px 10px #b1b0b0;
+    }
 }
 
-.btn--wider{
-  margin-top: 50px;
-  padding: 20px 65px ;
+.btn--wider {
+    margin-top: 50px;
+    padding: 20px 65px;
 }
-
 
 .favourite {
-  flex-grow: 1;
-  text-align: right;
-  font-size: 25px;
-  color: grey;
-  padding-top: 10px;
+    flex-grow: 1;
+    text-align: right;
+    font-size: 25px;
+    color: grey;
+    padding-top: 10px;
 }
+
 input {
-  display: none;
+    display: none;
 }
+
 .solid {
-    background: linear-gradient(
-    198deg,
-    rgba(129, 79, 127, 1) 9%,
-    rgba(160, 91, 220, 1) 30%
-  );
-  transition: opacity 3s;
-  opacity: 0;
-  -webkit-background-clip: text;
-  color: transparent;
-  padding: 1px;
-  position: absolute;
-  left: 0;
+    background: linear-gradient( 198deg, rgba(129, 79, 127, 1) 9%, rgba(160, 91, 220, 1) 30%);
+    transition: opacity 3s;
+    opacity: 0;
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 1px;
+    position: absolute;
+    left: 0;
 }
 
 .empty {
-  transition: opacity 3s;
-  opacity: 1;
-  padding: 1px;
-  left: 0;
-  position: absolute;
+    transition: opacity 3s;
+    opacity: 1;
+    padding: 1px;
+    left: 0;
+    position: absolute;
 }
 
 .favourite {
-  label{
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    position: relative;
-
-  }
-  input:checked + label {
-    .solid {
-      display: inline-block;
-      opacity: 1;
+    label {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        position: relative;
     }
-    .empty {
-      display: none;
-      opacity: 0;
+    input:checked+label {
+        .solid {
+            display: inline-block;
+            opacity: 1;
+        }
+        .empty {
+            display: none;
+            opacity: 0;
+        }
     }
-  }
-  
 }
 
-
 .card {
-  @include flex-column;
-  background-color: #fff;
-  box-shadow: 5px 5px 5px 5px #f2f2f2;
-  border-radius: 20px;
-  margin-bottom: 20px;
-  position: relative;
-
-  &__img {
-    border: 0px solid #fff;
-    height: 175px;
-    object-fit: cover;
-    border-top-left-radius: 19px;
-    border-top-right-radius: 19px;
-  }
-  &__new {
-    color: #139274;
-    background-color: #99e2d0;
-    padding: 3px 20px;
-    border: solid #99e2d0;
-    width: 30px;
-    position: absolute;
-    right: 25px;
-    top: 25px;
-    margin: -15px;
-  }
-
-  &__body {
-    display: flex;
-    padding: 10px 20px;
-    &__title {
-      font-size: 20px;
-      font-weight: bold;
-      font-family: Roboto;
+    @include flex-column;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px 5px #f2f2f2;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &__img {
+        border: 0px solid #fff;
+        height: 175px;
+        object-fit: cover;
+        border-top-left-radius: 19px;
+        border-top-right-radius: 19px;
     }
-    &__location {
-      margin: 5px 0;
+    &__new {
+        color: #139274;
+        background-color: #99e2d0;
+        padding: 3px 20px;
+        border: solid #99e2d0;
+        width: 30px;
+        position: absolute;
+        right: 25px;
+        top: 25px;
+        margin: -15px;
     }
-  }
+    &__body {
+        display: flex;
+        padding: 10px 20px;
+        &__title {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: Roboto;
+        }
+        &__location {
+            margin: 5px 0;
+        }
+    }
 }
