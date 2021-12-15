@@ -124,8 +124,7 @@ label {
   z-index: 1; }
 
 .resturants-section {
-  background-color: #f6f6f6;
-  margin: auto; }
+  background-color: #f6f6f6; }
 
 .resturants-container {
   max-width: 450px;
@@ -133,21 +132,9 @@ label {
   margin: auto;
   background-color: #f6f6f6;
   padding: 15px; }
-
-.resturants-header {
-  font-size: 28px;
-  font-family: Roboto;
-  font-weight: bold;
-  margin-left: -250px;
-  padding-top: 20px;
-  text-align: center; }
-
-@media (min-width: 780px) {
-  .resturants-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    max-width: 100%; } }
+  .resturants-container__header {
+    font-family: Roboto;
+    font-size: 28px; }
 
 footer {
   background-color: #353535;
@@ -215,13 +202,13 @@ li {
   opacity: 0; }
 
 .meal-list--ENTREES {
-  animation: meal-section 0.5s ease-out forwards; }
+  animation: loading-2 0.5s ease-out forwards; }
 
 .meal-list--MAIN-DISH {
-  animation: meal-section 1s ease-out forwards; }
+  animation: loading-2 1s ease-out forwards; }
 
 .meal-list--DESSERTS {
-  animation: meal-section 1.5s ease-out forwards; }
+  animation: loading-2 1.5s ease-out forwards; }
 
 .meal-type {
   text-align: left;
@@ -317,7 +304,7 @@ li {
   opacity: 0;
   justify-content: center;
   background-color: #cecece;
-  animation: loading-page 2.5s forwards; }
+  animation: loading 2.5s forwards; }
   .loading-page__spinner {
     border: 50px solid #f2f2f6;
     border-radius: 50%;
@@ -413,7 +400,6 @@ input {
     margin: -15px; }
   .card__body {
     display: flex;
-    min-width: 320px;
     padding: 10px 20px; }
     .card__body__title {
       font-size: 20px;
@@ -434,7 +420,7 @@ input {
     opacity: 0;
     top: -10000px; } }
 
-@keyframes meal-section {
+@keyframes loading-2 {
   0% {
     opacity: 0;
     top: -10000px; }

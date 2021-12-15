@@ -1,14 +1,14 @@
 {
-  "name": "p3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "sass": "node-sass -w src/scss/styles.scss src/css/styles.css "
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^6.0.1"
-  }
+    "name": "p3",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "sass": "node-sass -w src/scss/styles.scss css/styles.css "
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^6.0.1"
+    }
 }

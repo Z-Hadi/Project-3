@@ -99,6 +99,7 @@ input {
     }
     &__body {
         display: flex;
+        min-width: 320px;
         padding: 10px 20px;
         &__title {
             font-size: 20px;
